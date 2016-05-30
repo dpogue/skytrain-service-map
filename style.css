@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    background: #dcdcdc;
+    font-family: system, -apple-system, caption, sans-serif;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.omit {
+    display: none;
+}
+
+.btn {
+    text-transform: uppercase;
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    text-decoration: none !important;
+    margin: 1rem 0.5rem 0.5rem;
+    line-height: 2rem;
+    padding: 0 1rem;
+    border-radius: 2px;
+    background: #1a5dad;
+    color: white;
+    font-weight: 500;
+}
+
+#map {
+    text-align: center;
+    background: white;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    flex: 1 0 66vmax;
+}
+
+#mapsvg {
+    max-height: calc(66vh - 1rem);
+}
+
+#controls {
+    border: 0 none;
+    background: #dcdcdc;
+    color: #5a5a5a;
+    flex: 1 0 33vmax;
+    font-size: 13px;
+}
+
+details {
+    column-count: 2;
+}
+details[open] {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+summary {
+    padding: 0 2rem;
+    line-height: 3rem;
+    box-sizing: border-box;
+    color: #052e51;
+    font-weight: 500;
+    column-span: all;
+}
+summary::-webkit-details-marker {
+    float: right;
+    width: 0.75rem;
+    height: 0.75rem;
+    margin: 1.25rem 0.5rem 0 1.5rem;
+}
+
+
+label {
+    display: block;
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+    line-height: 3rem;
+}
+
+input[type="checkbox"] {
+    height: 1.5rem;
+    width: 1.5rem;
+    box-sizing: border-box;
+    margin: 0 0.5rem 0 0;
+    vertical-align: middle;
+}
+
+hr {
+    margin: 0 0.5rem;
+    border: 0 none;
+    border-top: 1px solid;
+}
+
+
+@media screen and (orientation: portrait) {
+    .omit {
+        display: inline;
+    }
+
+    hr {
+        border-top: 0 none;
+        height: 3rem;
+        margin: 0;
+    }
+}
+
+@media screen and (min-device-width: 360px) and (orientation: portrait) {
+    #controls {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    body {
+        flex-direction: row;
+        max-height: 100vh;
+    }
+
+    #mapsvg {
+        max-height: calc(100vh - 1.5rem);
+    }
+
+    #controls {
+        overflow: auto;
+    }
+
+    summary {
+        padding: 0 1rem;
+    }
+
+    details {
+        column-count: 1;
+    }
+}
+
+@media screen and (min-device-width: 610px) and (orientation: landscape) {
+    .omit {
+        display: inline;
+    }
+
+    summary {
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (min-device-width: 715px) and (orientation: landscape) {
+    #controls {
+        font-size: 1rem;
+    }
+}
