@@ -277,6 +277,10 @@
 
 
         <script>
+            if (!NodeList.prototype[Symbol.iterator]) {
+                NodeList.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
+            }
+
             let svg = document.getElementById('mapsvg');
             let canvas = document.createElement('canvas');
 
