@@ -4,8 +4,6 @@ body {
     font-family: system, -apple-system, caption, sans-serif;
     min-height: 100vh;
     width: 100vw;
-    display: flex;
-    flex-direction: column;
 }
 
 .omit {
@@ -15,7 +13,7 @@ body {
 .btn {
     text-transform: uppercase;
     display: inline-block;
-    float: right;
+    right: 1em;
     cursor: pointer;
     text-decoration: none !important;
     margin: 1rem 0.5rem 0.5rem;
@@ -25,6 +23,7 @@ body {
     background: #1a5dad;
     color: white;
     font-weight: 500;
+    position: fixed;
 }
 
 #map {
@@ -32,7 +31,6 @@ body {
     background: white;
     padding: 0.5rem;
     box-sizing: border-box;
-    flex: 1 0 66vmax;
 }
 
 #mapsvg {
@@ -43,31 +41,30 @@ body {
     border: 0 none;
     background: #dcdcdc;
     color: #5a5a5a;
-    flex: 1 0 33vmax;
+    flex: 1 0 33vh;
     font-size: 13px;
 }
 
-details {
+#controls div {
     column-count: 2;
 }
-details[open] {
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+
+@media (min-width: 600px) {
+  #controls div {
+      column-count: 3;
+  }
 }
 
-summary {
-    padding: 0 2rem;
-    line-height: 3rem;
-    box-sizing: border-box;
-    color: #052e51;
-    font-weight: 500;
-    column-span: all;
+@media (min-width: 850px) {
+  #controls div {
+      column-count: 4;
+  }
 }
-summary::-webkit-details-marker {
-    float: right;
-    width: 0.75rem;
-    height: 0.75rem;
-    margin: 1.25rem 0.5rem 0 1.5rem;
+
+@media (min-width: 1024px) {
+  #controls div {
+      column-count: 5;
+  }
 }
 
 
@@ -75,7 +72,7 @@ label {
     display: block;
     box-sizing: border-box;
     padding: 0 0.5rem;
-    line-height: 3rem;
+    line-height: 2rem;
 }
 
 input[type="checkbox"] {
@@ -90,62 +87,4 @@ hr {
     margin: 0 0.5rem;
     border: 0 none;
     border-top: 1px solid;
-}
-
-
-@media screen and (orientation: portrait) {
-    .omit {
-        display: inline;
-    }
-
-    hr {
-        border-top: 0 none;
-        height: 3rem;
-        margin: 0;
-    }
-}
-
-@media screen and (min-device-width: 360px) and (orientation: portrait) {
-    #controls {
-        font-size: 1rem;
-    }
-}
-
-@media screen and (orientation: landscape) {
-    body {
-        flex-direction: row;
-        max-height: 100vh;
-    }
-
-    #mapsvg {
-        max-height: calc(100vh - 1.5rem);
-    }
-
-    #controls {
-        overflow: auto;
-    }
-
-    summary {
-        padding: 0 1rem;
-    }
-
-    details {
-        column-count: 1;
-    }
-}
-
-@media screen and (min-device-width: 610px) and (orientation: landscape) {
-    .omit {
-        display: inline;
-    }
-
-    summary {
-        padding: 0 2rem;
-    }
-}
-
-@media screen and (min-device-width: 715px) and (orientation: landscape) {
-    #controls {
-        font-size: 1rem;
-    }
 }
