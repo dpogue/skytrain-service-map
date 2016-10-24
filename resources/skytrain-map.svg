@@ -72,16 +72,16 @@
   <text id="caption" x="797.482" y="51.519">SkyTrain System Status</text>
 
   <path id="m-vc-cm" d="M291.92 284.69l78.54-.253 17.172 17.425"/>
-  <path id="m-cm-re" d="M397.23 305.39h60.104"/>
-  <path id="m-re-ru" d="M467.44 305.39l69.448.253"/>
-  <path id="m-ru-gm" d="M547.99 305.39l69.7.253"/>
-  <path id="m-gm-br" d="M630.32 305.9l68.185.253"/>
-  <path id="m-br-ho" d="M711.39 305.9l68.69-.253"/>
-  <path id="m-ho-sp" d="M792.96 305.65l69.7.253"/>
-  <path id="m-sp-lc" d="M871.75 305.9h71.973"/>
-  <path id="m-lc-pw" d="M954.58 305.9l69.7.253"/>
-  <path id="m-pw-lh" d="M1035.4 306.27l71.216-.148"/>
-  <path class="future" id="m-lh-bq" d="M1116.8 306.88l41.25.357 22.143-21.696-.1-47.77"/>
+  <path id="m-cm-re" d="M397.23 306.0h60.104"/>
+  <path id="m-re-ru" d="M467.44 306.0l69.448.253"/>
+  <path id="m-ru-gm" d="M547.99 306.0l69.7.253"/>
+  <path id="m-gm-br" d="M630.32 306.0l68.185.253"/>
+  <path id="m-br-ho" d="M711.39 306.0l68.69-.253"/>
+  <path id="m-ho-sp" d="M792.96 306.0l69.7.253"/>
+  <path id="m-sp-lc" d="M871.75 306.0h71.973"/>
+  <path id="m-lc-pw" d="M954.58 306.0l69.7.253"/>
+  <path id="m-pw-lh" d="M1035.4 306.0l71.216-.148"/>
+  <path class="future" id="m-lh-bq" d="M1116.8 306.0l41.25.357 22.143-21.696-.1-47.77"/>
   <path class="future" id="m-bq-mc" d="M1179.8 226.35l.253-18.562 21.465-20.834 60.61.253"/>
   <path class="future" id="m-mc-ic" d="M1274.5 187.41l74.107.357"/>
   <path class="future" id="m-ic-cc" d="M1360.7 188.13l51.964.357 6.786-6.07"/>
@@ -92,7 +92,7 @@
   <path id="e-bu-gv" d="M90.18 119.2l-11.162 11.964 44.196 43.393"/>
   <path id="e-gv-st" d="M131.61 182.95l26.964 26.607"/>
   <path id="e-st-mn" d="M166.79 217.59l28.036 27.5"/>
-  <path id="e-mn-bw" d="M202.78 253.12l13.006 12.753 122.42 1.2 42.363 42.11"/>
+  <path id="e-mn-bw" d="M202.78 253.12l13.006 12.753 122.42 0.0 42.363 42.11"/>
   <path id="e-bw-na" d="M388.64 316.5l54.548 54.296"/>
   <path id="e-na-tn" d="M450.87 379.03l40.554 40.763"/>
   <path id="e-tn-jy" d="M499.76 427.37l39.648 39.9"/>
@@ -104,13 +104,13 @@
   <path id="e-ts-nw" d="M904.33 591.52l63.135 1.01 33.335-32.325"/>
   <path id="e-nw-co" d="M1007.4 554.14l46.972-47.982"/>
   <path id="e-co-sr" style="stroke-width:5" d="M1062.7 502.12l31.062-30.178 160.11.63"/>
-  <path id="e-sr-gw" style="stroke-width:5" d="M1266.4 472.59l40.357 1.07 10.357 11.43"/>
-  <path id="e-gw-sc" style="stroke-width:5" d="M1324.3 492.23l12.143 12.5 1.07 31.43"/>
+  <path id="e-sr-gw" style="stroke-width:5" d="M1266.4 472.59l40.357 0.0 10.357 11.43"/>
+  <path id="e-gw-sc" style="stroke-width:5" d="M1324.3 492.23l13.143 12.5 0.0 31.43"/>
   <path id="e-sc-kg" style="stroke-width:5" d="M1337.5 548.31v45.357"/>
   <path id="e-co-sa" style="stroke-width:5" d="M1059.1 498.58l62.124-60.357"/>
   <path id="e-sa-bd" style="stroke-width:5" d="M1129.1 431.41l41.416-40.406"/>
   <path id="e-lh-pw" style="stroke-width:5" d="M1035.1 311.21l71.468-.0"/>
-  <path id="e-bd-lh" style="stroke-width:5" d="M1116.5 311.75l43.373.442 20.898 25.4.19 42.363-3.85 4.23"/>
+  <path id="e-bd-lh" style="stroke-width:5" d="M1116.5 311.75l43.373.0 20.898 25.4.0 42.363-3.85 4.23"/>
 
 
   <circle id="vc" cx="285.75" cy="284.9" r="5.24"/>
