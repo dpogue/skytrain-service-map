@@ -313,6 +313,10 @@
 
 
         <script>
+            const OUTPUT_WIDTH  = 800;
+            const OUTPUT_HEIGHT = 355;
+
+
             if (!NodeList.prototype[Symbol.iterator]) {
                 NodeList.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
             }
@@ -326,8 +330,8 @@
                 }
             });
 
-            canvas.height = 355;
-            canvas.width = 800;
+            canvas.height = OUTPUT_HEIGHT;
+            canvas.width = OUTPUT_WIDTH;
             let ctx = canvas.getContext('2d');
 
             function toggleClosed(station, force) {
@@ -351,16 +355,22 @@
 
             function generate() {
                 ctx.fillStyle = 'white';
-                ctx.fillRect(0, 0, 800, 355);
+                ctx.fillRect(0, 0, OUTPUT_WIDTH, OUTPUT_HEIGHT);
 
                 let svgtext = svg.outerHTML;
+
+                // So Firefox has a long-standing bug where it won't render
+                // SVGs to canvas unless they have an explicit height/width
+                // set... so let's do that :(
+                svgtext = svgtext.replace(/viewBox=/, `height="${OUTPUT_HEIGHT}" width="${OUTPUT_WIDTH}" viewBox=`);
+
                 let url = 'data:image/svg+xml;base64,' + btoa(svgtext);
                 let image = new Image();
 
                 image.onload = function() {
-                    ctx.drawImage(image, 0, 0, 800, 355);
+                    ctx.drawImage(image, 0, 0, OUTPUT_WIDTH, OUTPUT_HEIGHT);
 
-                    img = null;
+                    image = null;
                 };
                 image.src = url;
             }
