@@ -82,17 +82,6 @@
               }
             </style>
 
-            <filter id="evergreen" filterUnits="userSpaceOnUse">
-              <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" />
-              <feOffset dx="0" dy="0" result="offsetblur" />
-              <feFlood flood-color="rgba(0,128,0,0.75)" />
-              <feComposite in2="offsetblur" operator="in" />
-              <feMerge>
-                <feMergeNode />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-
             <text id="caption" x="797.482" y="51.519">SkyTrain System Status</text>
 
             <path id="m-vc-cm" d="M291.92 284.69l78.54-.253 17.172 17.425"/>
@@ -105,12 +94,12 @@
             <path id="m-sp-lc" d="M871.75 306.0h71.973"/>
             <path id="m-lc-pw" d="M954.58 306.0l69.7.253"/>
             <path id="m-pw-lh" d="M1035.4 306.0l71.216-.148"/>
-            <path id="m-lh-bq" filter="url(#evergreen)" d="M1116.8 306.0l41.25.357 22.143-21.696-.1-47.77"/>
-            <path id="m-bq-mc" filter="url(#evergreen)" d="M1179.8 226.35l.253-18.562 21.465-20.834 60.61.253"/>
-            <path id="m-mc-ic" filter="url(#evergreen)" d="M1274.5 187.41l74.107.357"/>
-            <path id="m-ic-cc" filter="url(#evergreen)" d="M1360.7 188.13l51.964.357 6.786-6.07"/>
-            <path id="m-cc-ln" filter="url(#evergreen)" d="M1427.7 174.02l7.053-7.68-.088-20.535"/>
-            <path id="m-ln-la" filter="url(#evergreen)" d="M1434.5 101.88v31.786"/>
+            <path id="m-lh-bq" d="M1116.8 306.0l41.25.357 22.143-21.696-.1-47.77"/>
+            <path id="m-bq-mc" d="M1179.8 226.35l.253-18.562 21.465-20.834 60.61.253"/>
+            <path id="m-mc-ic" d="M1274.5 187.41l74.107.357"/>
+            <path id="m-ic-cc" d="M1360.7 188.13l51.964.357 6.786-6.07"/>
+            <path id="m-cc-ln" d="M1427.7 174.02l7.053-7.68-.088-20.535"/>
+            <path id="m-ln-la" d="M1434.5 101.88v31.786"/>
 
             <path id="e-wf-bu" d="M98.214 111.52l15.893-13.93L130 111.52"/>
             <path id="e-bu-gv" d="M90.18 119.2l-11.162 11.964 44.196 43.393"/>
