@@ -68,6 +68,12 @@
                   opacity: 0.15;
               }
 
+              path.shuttle {
+                  stroke: #f4268c;
+                  stroke-dasharray: 5, 8;
+                  stroke-width: 3 !important;
+              }
+
               circle.closed,
               ellipse.closed {
                   stroke: #ff0000;
@@ -315,7 +321,18 @@
 
             svg.addEventListener('click', function(e) {
                 if (e.target.nodeName.toLowerCase() == "path") {
-                  togglePath(e.target);
+                    togglePath(e.target);
+                }
+            });
+
+            svg.addEventListener('auxclick', function(e) {
+                if (e.button !== 1) {
+                    // We only care about middle clicks
+                    return;
+                }
+
+                if (e.target.nodeName.toLowerCase() == "path") {
+                    togglePath(e.target, 'shuttle');
                 }
             });
 
@@ -333,8 +350,10 @@
                 requestAnimationFrame(generate);
             }
 
-            function togglePath(path) {
-                path.classList.toggle('closed');
+            function togglePath(path, state='closed') {
+                path.classList.toggle(state);
+
+                requestAnimationFrame(generate);
             }
 
             function saveImage(el) {
